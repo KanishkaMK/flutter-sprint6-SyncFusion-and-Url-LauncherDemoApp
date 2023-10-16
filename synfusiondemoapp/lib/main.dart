@@ -7,6 +7,7 @@ import 'package:synfusiondemoapp/chart.dart';
 import 'package:synfusiondemoapp/demoitems.dart';
 import 'package:synfusiondemoapp/pdfviewer.dart';
 import 'package:synfusiondemoapp/qrcode.dart';
+import 'package:synfusiondemoapp/url_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,6 +59,10 @@ class SynfusionDemo extends StatelessWidget {
               listTitle: 'Chart',
               demoRoute: ChartDemo(),
             ),
+
+             TextButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => UrlPage(),));
+          }, child: Text('Url launcher'))
           ],
         ));
   }

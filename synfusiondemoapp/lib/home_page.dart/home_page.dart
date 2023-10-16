@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:synfusiondemoapp/url_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -32,8 +33,14 @@ class HomePage extends StatelessWidget {
             
           },
           child: Text('Chart')),
+          TextButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => UrlPage(),));
+          }, child: Text('Url launcher'))
         ],
+
       ),
+
+      
     );
   }
 }
